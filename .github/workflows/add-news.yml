@@ -1,0 +1,45 @@
+name: Add site news
+on:
+  workflow_dispatch:
+    inputs:
+      msg:
+        description: "News message"
+        required: true
+        type: string
+      kind:
+        description: "Kind (news, release, note, ...)"
+        required: false
+        default: "news"
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add news entry
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = 'site/assets/updates.json';
+          const now = new Date().toISOString();
+          const msg = process.env.MSG || 'Update';
+          const kind = process.env.KIND || 'news';
+          let arr = [];
+          try { arr = JSON.parse(fs.readFileSync(path,'utf8')||'[]'); } catch(e) { arr = []; }
+          arr.unshift({ ts: now, kind, msg });
+          fs.writeFileSync(path, JSON.stringify(arr, null, 2));
+          NODE
+        env:
+          MSG: ${{ github.event.inputs.msg }}
+          KIND: ${{ github.event.inputs.kind }}
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add site/assets/updates.json
+          git commit -m "chore: add news - ${{ github.event.inputs.kind }}: ${{ github.event.inputs.msg }}" || echo "no changes"
+          git push
