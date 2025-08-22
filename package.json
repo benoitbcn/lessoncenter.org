@@ -1,5 +1,5 @@
 {
-  "name": "lessoncenter-org-vitrine",
+  "name": "lessoncenter-org-vitrine-en",
   "version": "1.0.0",
   "private": true,
   "scripts": { "build": "node build.js" }

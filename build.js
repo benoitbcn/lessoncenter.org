@@ -19,5 +19,5 @@ async function copyDir(src, dest) {
   const dest = path.join(__dirname, 'dist');
   await fsp.rm(dest, { recursive: true, force: true });
   await copyDir(src, dest);
-  console.log('Site vitrine copié dans dist/');
+  console.log('English vitrine copied to dist/');
 })().catch(err => { console.error(err); process.exit(1); });
