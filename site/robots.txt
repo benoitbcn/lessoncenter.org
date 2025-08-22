@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lessoncenter.org/sitemap.xml
