@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Updates — LessonCenter</title>
+<link rel="stylesheet" href="/assets/css/style.css">
+</head><body>
+<header class="site-header"><div class="container row between middle">
+  <a class="brand row middle" href="/"><img src="/assets/img/logo.svg" width="36" height="36" alt=""> <span>LessonCenter</span></a>
+  <nav class="nav"><a href="/">Home</a> <a href="/updates.html">Updates</a></nav>
+</div></header>
+
+<main class="page container">
+  <h1>Latest updates</h1>
+  <ul class="updates-list"></ul>
+  <p class="muted small">Feed: <a href="/feed.xml">/feed.xml</a></p>
+</main>
+
+<script>
+fetch('/assets/updates.json').then(r=>r.json()).then(arr=>{
+  const ul=document.querySelector('.updates-list'); if(!ul) return;
+  if(!Array.isArray(arr)||arr.length===0){ ul.innerHTML='<li>No updates yet.</li>'; return; }
+  ul.innerHTML='';
+  arr.slice(0,10).forEach(it=>{
+    const li=document.createElement('li');
+    const d=new Date(it.ts);
+    li.textContent = d.toLocaleString()+' — '+it.msg;
+    ul.appendChild(li);
+  });
+});
+</script>
+</body></html>
