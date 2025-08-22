@@ -24,15 +24,16 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   try {
     const res = await fetch('/assets/updates.json', { cache: 'no-store' });
     const data = res.ok ? await res.json() : [];
+    const section = document.getElementById('updates');
     const ul = document.querySelector('#updates .updates-list');
-    if (!ul || !Array.isArray(data)) return;
+    if (!section || !ul || !Array.isArray(data)) return;
 
-    // Préfère les vraies news; si aucune, montre quand même les heartbeats
+    // Garde uniquement les vraies news (pas de heartbeat)
     const newsOnly = data.filter(it => it && it.kind !== 'heartbeat');
-    const list = newsOnly.length ? newsOnly : data;
 
-    if (!list.length) {
-      ul.innerHTML = '<li>No updates yet.</li>';
+    // S'il n'y a pas de vraie news, on masque toute la section
+    if (!newsOnly.length) {
+      section.style.display = 'none';
       return;
     }
 
@@ -42,9 +43,9 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     });
 
     ul.innerHTML = '';
-    list.slice(0, 5).forEach(it => {
+    newsOnly.slice(0, 5).forEach(it => {
       const ts = it && it.ts ? new Date(it.ts) : new Date();
-      const msg = (it && it.msg) ? it.msg : 'Daily check';
+      const msg = (it && it.msg) ? it.msg : '';
       const li = document.createElement('li');
       li.textContent = `${fmt.format(ts)} — ${msg}`;
       ul.appendChild(li);
