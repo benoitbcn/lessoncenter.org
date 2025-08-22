@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Home · LessonCenter</title>
+<link rel="stylesheet" href="/assets/css/styles.css" />
+<body>
+
+    <nav class="nav container">
+      <strong>LessonCenter</strong>
+      <a href="/index.html" class='active'>Home</a>
+      <a href="/about.html" >About</a>
+      <a href="/teachers.html" >Teachers</a>
+      <a href="/students.html" >Students</a>
+      <a href="/resources.html" >Resources</a>
+      <a href="/contact.html" >Contact</a>
+    </nav>
+    
+
+<section class="hero">
+  <div class="container">
+    <h1>LessonCenter</h1>
+    <p>Your weekly micro‑library for teachers & students: clear topics, short guides, and curated links.</p>
+    <p><a href="/resources.html" class="btn">Browse resources</a></p>
+  </div>
+</section>
+
+<div class="container grid">
+  <div class="card">
+    <h2>Weekly roundup</h2>
+    <p>Fresh content every week. Subscribe to be notified.</p>
+    <form id="subForm">
+      <label>Email</label>
+      <input type="email" name="email" required placeholder="you@example.com" />
+      <div style="height:8px"></div>
+      <button class="btn" type="submit">Subscribe</button>
+      <div style="height:6px"></div>
+      <small id="subMsg"></small>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Latest resources</h2>
+    <ul id="latestList"><li>Loading…</li></ul>
+    <a class="btn" href="/resources.html">See all</a>
+  </div>
+</div>
+
+<script>
+async function fetchLatest() {{
+  try {{
+    const r = await fetch('/api/posts');
+    const data = await r.json();
+    const posts = data.posts || [];
+    const ul = document.getElementById('latestList');
+    ul.innerHTML = '';
+    posts.slice(0,5).forEach(p => {{
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="${{p.url}}" target="_blank" rel="noopener">${{p.title}}</a>`;
+      ul.appendChild(li);
+    }});
+  }} catch(e) {{
+    document.getElementById('latestList').innerHTML = '<li>Failed to load.</li>';
+  }}
+}}
+fetchLatest();
+
+document.getElementById('subForm').addEventListener('submit', async (ev) => {{
+  ev.preventDefault();
+  const fd = new FormData(ev.target);
+  const msg = document.getElementById('subMsg');
+  msg.textContent = 'Sending…';
+  try {{
+    const r = await fetch('/api/subscribe', {{ method:'POST', body: fd }});
+    const j = await r.json();
+    msg.textContent = j.ok ? 'Thanks! You are on the list.' : (j.error || 'Error.');
+  }} catch(e) {{
+    msg.textContent = 'Network error.';
+  }}
+}});
+</script>
+
+
+    <footer class="container">
+      <small>© 2025 LessonCenter • Built on Cloudflare Pages + Functions</small>
+    </footer>
+    
+</body>
+</html>
