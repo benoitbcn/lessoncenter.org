@@ -19,29 +19,44 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// --- Latest updates on the home page (if the section exists) ---
-fetch('/assets/updates.json')
-  .then(r => r.ok ? r.json() : [])
-  .then(arr => {
+// --- Latest updates on the home page ---
+(async () => {
+  try {
+    const res = await fetch('/assets/updates.json', { cache: 'no-store' });
+    const data = res.ok ? await res.json() : [];
     const ul = document.querySelector('#updates .updates-list');
-    if (!ul || !Array.isArray(arr)) return;
-    if (!arr.length) {
+    if (!ul || !Array.isArray(data)) return;
+
+    // Préfère les vraies news; si aucune, montre quand même les heartbeats
+    const newsOnly = data.filter(it => it && it.kind !== 'heartbeat');
+    const list = newsOnly.length ? newsOnly : data;
+
+    if (!list.length) {
       ul.innerHTML = '<li>No updates yet.</li>';
       return;
     }
+
+    const fmt = new Intl.DateTimeFormat('en-GB', {
+      dateStyle: 'medium',
+      timeStyle: 'short'
+    });
+
     ul.innerHTML = '';
-    arr.slice(0, 5).forEach(it => {
+    list.slice(0, 5).forEach(it => {
+      const ts = it && it.ts ? new Date(it.ts) : new Date();
+      const msg = (it && it.msg) ? it.msg : 'Daily check';
       const li = document.createElement('li');
-      const d = new Date(it.ts);
-      li.textContent = d.toLocaleString() + ' — ' + (it.msg || 'Automated heartbeat');
+      li.textContent = `${fmt.format(ts)} — ${msg}`;
       ul.appendChild(li);
     });
-  })
-  .catch(() => {});
+  } catch (_) {
+    // silencieux
+  }
+})();
 
 // --- Build timestamp (if /assets/build.txt exists) ---
-fetch('/assets/build.txt')
-  .then(r => r.ok ? r.text() : '')
+fetch('/assets/build.txt', { cache: 'no-store' })
+  .then(r => (r.ok ? r.text() : ''))
   .then(t => {
     const el = document.querySelector('.stamp');
     if (el && t) el.textContent = 'Last update: ' + t.trim();
