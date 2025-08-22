@@ -1,0 +1,21 @@
+name: Build stamp (on every push)
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  stamp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p site/assets
+          date -u +"%Y-%m-%dT%H:%M:%SZ" > site/assets/build.txt
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add site/assets/build.txt
+          git commit -m "chore: build stamp" || echo "no changes"
+          git push
