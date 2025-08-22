@@ -17,7 +17,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
       el.scrollIntoView({ behavior: 'smooth' });
     }
   });
-});
+}
 
 // --- Latest updates on the home page ---
 (async () => {
@@ -28,10 +28,10 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     const ul = document.querySelector('#updates .updates-list');
     if (!section || !ul || !Array.isArray(data)) return;
 
-    // Garde uniquement les vraies news (pas de heartbeat)
+    // keep only real news (no heartbeat)
     const newsOnly = data.filter(it => it && it.kind !== 'heartbeat');
 
-    // S'il n'y a pas de vraie news, on masque toute la section
+    // if no real news, hide the whole section
     if (!newsOnly.length) {
       section.style.display = 'none';
       return;
@@ -51,7 +51,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
       ul.appendChild(li);
     });
   } catch (_) {
-    // silencieux
+    // silent
   }
 })();
 
