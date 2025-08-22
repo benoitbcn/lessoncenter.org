@@ -1,9 +1,9 @@
-name: Auto rotate news
+name: Auto rotate news (dedupe & keep last N)
 
 on:
   schedule:
-    - cron: '0 7 * * MON'   # chaque Lundi 07:00 UTC
-  workflow_dispatch:        # tu peux aussi le lancer une fois maintenant
+    - cron: '0 7 * * MON'   # chaque lundi 07:00 UTC
+  workflow_dispatch:        # tu peux aussi le lancer une 1re fois à la main
 
 permissions:
   contents: write
@@ -14,43 +14,66 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Add weekly news from seeds
+      - name: Add weekly news from seeds (dedupe + cap)
         run: |
           node - <<'NODE'
           const fs = require('fs');
-          const seedsPath = 'site/assets/news-seed.json';
-          const statePath = 'site/assets/news-state.json';
+
+          const seedsPath   = 'site/assets/news-seed.json';
+          const statePath   = 'site/assets/news-state.json';
           const updatesPath = 'site/assets/updates.json';
+          const MAX_NEWS = 5; // <= nombre d'actus à garder (hors heartbeats)
 
-          // charge seeds
-          const seeds = JSON.parse(fs.readFileSync(seedsPath,'utf8'));
-          if (!Array.isArray(seeds) || !seeds.length) process.exit(0);
-
-          // charge état (index courant)
-          let state = { lastIndex: -1 };
-          try { state = JSON.parse(fs.readFileSync(statePath,'utf8')); } catch(e) {}
-
-          // pick next index (rotation)
-          const nextIndex = (Number(state.lastIndex) + 1) % seeds.length;
-          const msg = seeds[nextIndex];
-
-          // charge updates.json
-          let arr = [];
-          try { arr = JSON.parse(fs.readFileSync(updatesPath,'utf8')||'[]'); } catch(e) { arr = []; }
-
-          // évite d'empiler la même news si déjà tout en haut
-          if (arr[0] && arr[0].kind !== 'heartbeat' && arr[0].msg === msg) {
-            console.log('Top news already same, skipping.');
+          const seeds = JSON.parse(fs.readFileSync(seedsPath,'utf8')).filter(Boolean);
+          if (!Array.isArray(seeds) || !seeds.length) {
+            console.log('No seeds found, abort.');
             process.exit(0);
           }
 
-          // ajoute l'entrée
-          const now = new Date().toISOString();
-          arr.unshift({ ts: now, kind: 'news', msg });
+          let state = { lastIndex: -1 };
+          try { state = JSON.parse(fs.readFileSync(statePath,'utf8')); } catch (e) {}
 
-          // écrit fichiers
-          fs.writeFileSync(updatesPath, JSON.stringify(arr, null, 2));
-          fs.writeFileSync(statePath, JSON.stringify({ lastIndex: nextIndex }, null, 2));
+          let arr = [];
+          try { arr = JSON.parse(fs.readFileSync(updatesPath,'utf8') || '[]'); } catch(e) { arr = []; }
+
+          // Sépare vraies news vs heartbeats
+          let news = arr.filter(x => x && x.kind !== 'heartbeat');
+          const heartbeats = arr.filter(x => x && x.kind === 'heartbeat');
+
+          // Ensemble des messages récents (fenêtre = MAX_NEWS)
+          const recentMsgs = new Set(news.slice(0, MAX_NEWS).map(x => x.msg));
+
+          // Cherche la prochaine seed qui N'EST PAS dans les N dernières
+          let idx = Number(state.lastIndex);
+          let chosen = null;
+          for (let i = 0; i < seeds.length; i++) {
+            idx = (idx + 1) % seeds.length;
+            if (!recentMsgs.has(seeds[idx])) {
+              chosen = { idx, msg: seeds[idx] };
+              break;
+            }
+          }
+
+          // Si toutes les seeds sont déjà présentes dans la fenêtre des N dernières, on SKIP
+          if (!chosen) {
+            console.log('All seed messages already appear in the last', MAX_NEWS, 'news. Skipping.');
+            process.exit(0);
+          }
+
+          // Ajoute la nouvelle actu en tête
+          const now = new Date().toISOString();
+          news.unshift({ ts: now, kind: 'news', msg: chosen.msg });
+
+          // Coupe à MAX_NEWS (on garde uniquement N vraies actus)
+          news = news.slice(0, MAX_NEWS);
+
+          // Recompose le tableau: news récentes + (tous) heartbeats
+          const next = news.concat(heartbeats);
+
+          // Écrit les fichiers
+          fs.writeFileSync(updatesPath, JSON.stringify(next, null, 2));
+          fs.writeFileSync(statePath, JSON.stringify({ lastIndex: chosen.idx }, null, 2));
+          console.log('Added:', chosen.msg);
           NODE
 
       - name: Commit & push
@@ -58,5 +81,5 @@ jobs:
           git config user.name  "github-actions"
           git config user.email "actions@users.noreply.github.com"
           git add site/assets/updates.json site/assets/news-state.json
-          git commit -m "chore: weekly auto-news" || echo "no changes"
+          git commit -m "chore: weekly auto-news (dedupe & cap)" || echo "no changes"
           git push
