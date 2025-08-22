@@ -1,0 +1,51 @@
+name: Daily heartbeat
+on:
+  schedule:
+    - cron: '0 6 * * *'   # chaque jour à 06:00 UTC (8h Paris l'été)
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update updates.json + feed.xml
+        run: |
+          mkdir -p site/assets
+          node - <<'NODE'
+          const fs=require('fs');
+          const now=new Date().toISOString();
+          const p='site/assets/updates.json';
+          let arr=[];
+          try{arr=JSON.parse(fs.readFileSync(p,'utf8')||'[]');}catch(e){arr=[];}
+          arr.unshift({ts:now, kind:"heartbeat", msg:"Automated heartbeat"});
+          arr=arr.slice(0,30); // garde les 30 dernières
+          fs.writeFileSync(p, JSON.stringify(arr,null,2));
+
+          const items=arr.map(it=>`
+            <entry>
+              <title>${it.msg}</title>
+              <id>tag:lessoncenter.org,${it.ts}:update</id>
+              <updated>${it.ts}</updated>
+              <content type="text">${it.msg}</content>
+            </entry>`).join('\n');
+          const xml = `<?xml version="1.0" encoding="utf-8"?>
+          <feed xmlns="http://www.w3.org/2005/Atom">
+            <title>LessonCenter updates</title>
+            <id>tag:lessoncenter.org,2025:updates</id>
+            <updated>${now}</updated>
+            <link rel="alternate" href="https://lessoncenter.org/updates.html"/>
+            ${items}
+          </feed>`;
+          fs.writeFileSync('site/feed.xml', xml);
+          NODE
+
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add site/assets/updates.json site/feed.xml
+          git commit -m "chore: daily heartbeat" || echo "no changes"
+          git push
