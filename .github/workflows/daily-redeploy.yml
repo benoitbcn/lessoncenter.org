@@ -1,18 +1,34 @@
 name: Daily rebuild
+
 on:
   schedule:
-    - cron: '0 6 * * *'   # tous les jours à 06:00 UTC (08:00 à Paris l'été)
-  workflow_dispatch:       # bouton "Run workflow" manuel
+    # tous les jours à 05:14 UTC (mets l'heure que tu veux)
+    - cron: '14 5 * * *'
+  workflow_dispatch:
+
 permissions:
-  contents: write
+  contents: write  # IMPORTANT: permet de pousser
+
 jobs:
-  bump:
+  touch-build-stamp:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Empty commit to trigger Pages deploy
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update build.txt (UTC timestamp)
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@users.noreply.github.com"
-          git commit --allow-empty -m "chore: daily rebuild"
+          mkdir -p site/assets
+          date -u +"%Y-%m-%dT%H:%M:%SZ" > site/assets/build.txt
+          echo "Build stamp -> $(cat site/assets/build.txt)"
+
+      - name: Commit & push (ignore 'nothing to commit')
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/assets/build.txt
+          git commit -m "chore: daily rebuild [skip ci]" || echo "Nothing to commit"
           git push
