@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2025-09-16T06:26:45.800Z",
+    "kind": "heartbeat",
+    "msg": "Automated heartbeat"
+  },
+  {
     "ts": "2025-09-15T07:31:05.126Z",
     "kind": "news",
     "msg": "New coaching slots released for next month."
