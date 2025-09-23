@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2025-09-23T06:27:06.696Z",
+    "kind": "heartbeat",
+    "msg": "Automated heartbeat"
+  },
+  {
     "ts": "2025-09-22T07:12:48.496Z",
     "kind": "news",
     "msg": "Programs page refreshed with clearer learning outcomes."
@@ -141,16 +146,6 @@
   },
   {
     "ts": "2025-08-30T06:48:34.327Z",
-    "kind": "heartbeat",
-    "msg": "Automated heartbeat"
-  },
-  {
-    "ts": "2025-08-29T06:50:24.425Z",
-    "kind": "heartbeat",
-    "msg": "Automated heartbeat"
-  },
-  {
-    "ts": "2025-08-28T06:52:23.122Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
   }
