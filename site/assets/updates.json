@@ -1,5 +1,30 @@
 [
   {
+    "ts": "2025-12-22T07:17:56.592Z",
+    "kind": "news",
+    "msg": "Added onboarding checklist for new learners."
+  },
+  {
+    "ts": "2025-12-15T07:18:13.488Z",
+    "kind": "news",
+    "msg": "Programs page refreshed with clearer learning outcomes."
+  },
+  {
+    "ts": "2025-12-08T07:17:24.923Z",
+    "kind": "news",
+    "msg": "New coaching slots released for next month."
+  },
+  {
+    "ts": "2025-12-01T07:16:36.729Z",
+    "kind": "news",
+    "msg": "Updated FAQ with pricing and funding guidance."
+  },
+  {
+    "ts": "2025-11-24T07:13:21.461Z",
+    "kind": "news",
+    "msg": "Corporate training: tailored tracks available for teams."
+  },
+  {
     "ts": "2025-12-22T06:33:40.283Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
@@ -33,31 +58,6 @@
     "ts": "2025-12-16T06:32:09.323Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
-  },
-  {
-    "ts": "2025-12-15T07:18:13.488Z",
-    "kind": "news",
-    "msg": "Programs page refreshed with clearer learning outcomes."
-  },
-  {
-    "ts": "2025-12-08T07:17:24.923Z",
-    "kind": "news",
-    "msg": "New coaching slots released for next month."
-  },
-  {
-    "ts": "2025-12-01T07:16:36.729Z",
-    "kind": "news",
-    "msg": "Updated FAQ with pricing and funding guidance."
-  },
-  {
-    "ts": "2025-11-24T07:13:21.461Z",
-    "kind": "news",
-    "msg": "Corporate training: tailored tracks available for teams."
-  },
-  {
-    "ts": "2025-11-17T07:12:59.366Z",
-    "kind": "news",
-    "msg": "New Advanced cohort now open for enrollment."
   },
   {
     "ts": "2025-12-15T06:33:59.848Z",
