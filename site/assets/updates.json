@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2025-12-30T06:31:52.816Z",
+    "kind": "heartbeat",
+    "msg": "Automated heartbeat"
+  },
+  {
     "ts": "2025-12-29T07:19:15.729Z",
     "kind": "news",
     "msg": "Improved contact response time and SLA."
@@ -141,11 +146,6 @@
   },
   {
     "ts": "2025-12-06T06:27:04.390Z",
-    "kind": "heartbeat",
-    "msg": "Automated heartbeat"
-  },
-  {
-    "ts": "2025-12-05T06:30:31.060Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
   }
