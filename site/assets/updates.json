@@ -1,5 +1,30 @@
 [
   {
+    "ts": "2026-02-09T07:50:01.792Z",
+    "kind": "news",
+    "msg": "New Advanced cohort now open for enrollment."
+  },
+  {
+    "ts": "2026-02-02T07:43:31.073Z",
+    "kind": "news",
+    "msg": "Refined schedules to better match working hours."
+  },
+  {
+    "ts": "2026-01-26T07:21:04.386Z",
+    "kind": "news",
+    "msg": "Added success stories and testimonials."
+  },
+  {
+    "ts": "2026-01-19T07:22:27.493Z",
+    "kind": "news",
+    "msg": "Updated pricing page with clearer tiers and examples."
+  },
+  {
+    "ts": "2026-01-12T07:20:24.653Z",
+    "kind": "news",
+    "msg": "Published a short guide to picking the right program."
+  },
+  {
     "ts": "2026-02-09T07:03:12.317Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
@@ -33,31 +58,6 @@
     "ts": "2026-02-03T06:50:33.463Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
-  },
-  {
-    "ts": "2026-02-02T07:43:31.073Z",
-    "kind": "news",
-    "msg": "Refined schedules to better match working hours."
-  },
-  {
-    "ts": "2026-01-26T07:21:04.386Z",
-    "kind": "news",
-    "msg": "Added success stories and testimonials."
-  },
-  {
-    "ts": "2026-01-19T07:22:27.493Z",
-    "kind": "news",
-    "msg": "Updated pricing page with clearer tiers and examples."
-  },
-  {
-    "ts": "2026-01-12T07:20:24.653Z",
-    "kind": "news",
-    "msg": "Published a short guide to picking the right program."
-  },
-  {
-    "ts": "2026-01-05T07:21:57.354Z",
-    "kind": "news",
-    "msg": "Expanded Pro/Enterprise modules with hands-on workshops."
   },
   {
     "ts": "2026-02-02T07:00:51.724Z",
