@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-03-17T07:03:10.779Z",
+    "kind": "heartbeat",
+    "msg": "Automated heartbeat"
+  },
+  {
     "ts": "2026-03-16T08:02:24.960Z",
     "kind": "news",
     "msg": "Added onboarding checklist for new learners."
@@ -141,11 +146,6 @@
   },
   {
     "ts": "2026-02-21T06:39:58.915Z",
-    "kind": "heartbeat",
-    "msg": "Automated heartbeat"
-  },
-  {
-    "ts": "2026-02-20T06:55:11.633Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
   }
