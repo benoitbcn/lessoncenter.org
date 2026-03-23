@@ -1,5 +1,30 @@
 [
   {
+    "ts": "2026-03-23T07:56:09.683Z",
+    "kind": "news",
+    "msg": "Improved contact response time and SLA."
+  },
+  {
+    "ts": "2026-03-16T08:02:24.960Z",
+    "kind": "news",
+    "msg": "Added onboarding checklist for new learners."
+  },
+  {
+    "ts": "2026-03-09T07:43:51.029Z",
+    "kind": "news",
+    "msg": "Programs page refreshed with clearer learning outcomes."
+  },
+  {
+    "ts": "2026-03-02T07:42:31.020Z",
+    "kind": "news",
+    "msg": "New coaching slots released for next month."
+  },
+  {
+    "ts": "2026-02-23T07:47:47.397Z",
+    "kind": "news",
+    "msg": "Updated FAQ with pricing and funding guidance."
+  },
+  {
     "ts": "2026-03-23T07:08:41.966Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
@@ -33,31 +58,6 @@
     "ts": "2026-03-17T07:03:10.779Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
-  },
-  {
-    "ts": "2026-03-16T08:02:24.960Z",
-    "kind": "news",
-    "msg": "Added onboarding checklist for new learners."
-  },
-  {
-    "ts": "2026-03-09T07:43:51.029Z",
-    "kind": "news",
-    "msg": "Programs page refreshed with clearer learning outcomes."
-  },
-  {
-    "ts": "2026-03-02T07:42:31.020Z",
-    "kind": "news",
-    "msg": "New coaching slots released for next month."
-  },
-  {
-    "ts": "2026-02-23T07:47:47.397Z",
-    "kind": "news",
-    "msg": "Updated FAQ with pricing and funding guidance."
-  },
-  {
-    "ts": "2026-02-16T07:46:04.668Z",
-    "kind": "news",
-    "msg": "Corporate training: tailored tracks available for teams."
   },
   {
     "ts": "2026-03-16T07:15:21.527Z",
