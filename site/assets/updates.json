@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-03-31T07:12:50.025Z",
+    "kind": "heartbeat",
+    "msg": "Automated heartbeat"
+  },
+  {
     "ts": "2026-03-30T08:16:34.977Z",
     "kind": "news",
     "msg": "Expanded Pro/Enterprise modules with hands-on workshops."
@@ -141,11 +146,6 @@
   },
   {
     "ts": "2026-03-07T06:39:06.051Z",
-    "kind": "heartbeat",
-    "msg": "Automated heartbeat"
-  },
-  {
-    "ts": "2026-03-06T06:47:17.580Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
   }
