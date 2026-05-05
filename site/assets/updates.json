@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-05-05T08:07:16.642Z",
+    "kind": "heartbeat",
+    "msg": "Automated heartbeat"
+  },
+  {
     "ts": "2026-05-04T09:11:11.810Z",
     "kind": "news",
     "msg": "New Advanced cohort now open for enrollment."
@@ -141,11 +146,6 @@
   },
   {
     "ts": "2026-04-11T06:59:56.416Z",
-    "kind": "heartbeat",
-    "msg": "Automated heartbeat"
-  },
-  {
-    "ts": "2026-04-10T07:26:05.993Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
   }
