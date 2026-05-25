@@ -1,5 +1,30 @@
 [
   {
+    "ts": "2026-05-25T11:04:03.237Z",
+    "kind": "news",
+    "msg": "New coaching slots released for next month."
+  },
+  {
+    "ts": "2026-05-18T10:58:02.396Z",
+    "kind": "news",
+    "msg": "Updated FAQ with pricing and funding guidance."
+  },
+  {
+    "ts": "2026-05-11T10:28:43.928Z",
+    "kind": "news",
+    "msg": "Corporate training: tailored tracks available for teams."
+  },
+  {
+    "ts": "2026-05-04T09:11:11.810Z",
+    "kind": "news",
+    "msg": "New Advanced cohort now open for enrollment."
+  },
+  {
+    "ts": "2026-04-27T09:12:35.060Z",
+    "kind": "news",
+    "msg": "Refined schedules to better match working hours."
+  },
+  {
     "ts": "2026-05-25T10:03:04.193Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
@@ -33,31 +58,6 @@
     "ts": "2026-05-19T09:39:43.445Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
-  },
-  {
-    "ts": "2026-05-18T10:58:02.396Z",
-    "kind": "news",
-    "msg": "Updated FAQ with pricing and funding guidance."
-  },
-  {
-    "ts": "2026-05-11T10:28:43.928Z",
-    "kind": "news",
-    "msg": "Corporate training: tailored tracks available for teams."
-  },
-  {
-    "ts": "2026-05-04T09:11:11.810Z",
-    "kind": "news",
-    "msg": "New Advanced cohort now open for enrollment."
-  },
-  {
-    "ts": "2026-04-27T09:12:35.060Z",
-    "kind": "news",
-    "msg": "Refined schedules to better match working hours."
-  },
-  {
-    "ts": "2026-04-20T09:03:43.575Z",
-    "kind": "news",
-    "msg": "Added success stories and testimonials."
   },
   {
     "ts": "2026-05-18T10:00:46.975Z",
