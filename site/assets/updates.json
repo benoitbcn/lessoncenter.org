@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-05-26T09:53:59.069Z",
+    "kind": "heartbeat",
+    "msg": "Automated heartbeat"
+  },
+  {
     "ts": "2026-05-25T11:04:03.237Z",
     "kind": "news",
     "msg": "New coaching slots released for next month."
@@ -141,11 +146,6 @@
   },
   {
     "ts": "2026-05-02T07:42:23.091Z",
-    "kind": "heartbeat",
-    "msg": "Automated heartbeat"
-  },
-  {
-    "ts": "2026-05-01T08:09:34.227Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
   }

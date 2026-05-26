@@ -2,9 +2,51 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>LessonCenter updates</title>
   <id>tag:lessoncenter.org,2025:updates</id>
-  <updated>2026-05-25T10:03:04.193Z</updated>
+  <updated>2026-05-26T09:53:59.069Z</updated>
   <link rel="alternate" href="https://lessoncenter.org/updates.html"/>
   
+  <entry>
+    <title>Automated heartbeat</title>
+    <id>tag:lessoncenter.org,2026-05-26T09:53:59.069Z:update</id>
+    <updated>2026-05-26T09:53:59.069Z</updated>
+    <content type="text">Automated heartbeat</content>
+  </entry>
+
+  <entry>
+    <title>New coaching slots released for next month.</title>
+    <id>tag:lessoncenter.org,2026-05-25T11:04:03.237Z:update</id>
+    <updated>2026-05-25T11:04:03.237Z</updated>
+    <content type="text">New coaching slots released for next month.</content>
+  </entry>
+
+  <entry>
+    <title>Updated FAQ with pricing and funding guidance.</title>
+    <id>tag:lessoncenter.org,2026-05-18T10:58:02.396Z:update</id>
+    <updated>2026-05-18T10:58:02.396Z</updated>
+    <content type="text">Updated FAQ with pricing and funding guidance.</content>
+  </entry>
+
+  <entry>
+    <title>Corporate training: tailored tracks available for teams.</title>
+    <id>tag:lessoncenter.org,2026-05-11T10:28:43.928Z:update</id>
+    <updated>2026-05-11T10:28:43.928Z</updated>
+    <content type="text">Corporate training: tailored tracks available for teams.</content>
+  </entry>
+
+  <entry>
+    <title>New Advanced cohort now open for enrollment.</title>
+    <id>tag:lessoncenter.org,2026-05-04T09:11:11.810Z:update</id>
+    <updated>2026-05-04T09:11:11.810Z</updated>
+    <content type="text">New Advanced cohort now open for enrollment.</content>
+  </entry>
+
+  <entry>
+    <title>Refined schedules to better match working hours.</title>
+    <id>tag:lessoncenter.org,2026-04-27T09:12:35.060Z:update</id>
+    <updated>2026-04-27T09:12:35.060Z</updated>
+    <content type="text">Refined schedules to better match working hours.</content>
+  </entry>
+
   <entry>
     <title>Automated heartbeat</title>
     <id>tag:lessoncenter.org,2026-05-25T10:03:04.193Z:update</id>
@@ -52,41 +94,6 @@
     <id>tag:lessoncenter.org,2026-05-19T09:39:43.445Z:update</id>
     <updated>2026-05-19T09:39:43.445Z</updated>
     <content type="text">Automated heartbeat</content>
-  </entry>
-
-  <entry>
-    <title>Updated FAQ with pricing and funding guidance.</title>
-    <id>tag:lessoncenter.org,2026-05-18T10:58:02.396Z:update</id>
-    <updated>2026-05-18T10:58:02.396Z</updated>
-    <content type="text">Updated FAQ with pricing and funding guidance.</content>
-  </entry>
-
-  <entry>
-    <title>Corporate training: tailored tracks available for teams.</title>
-    <id>tag:lessoncenter.org,2026-05-11T10:28:43.928Z:update</id>
-    <updated>2026-05-11T10:28:43.928Z</updated>
-    <content type="text">Corporate training: tailored tracks available for teams.</content>
-  </entry>
-
-  <entry>
-    <title>New Advanced cohort now open for enrollment.</title>
-    <id>tag:lessoncenter.org,2026-05-04T09:11:11.810Z:update</id>
-    <updated>2026-05-04T09:11:11.810Z</updated>
-    <content type="text">New Advanced cohort now open for enrollment.</content>
-  </entry>
-
-  <entry>
-    <title>Refined schedules to better match working hours.</title>
-    <id>tag:lessoncenter.org,2026-04-27T09:12:35.060Z:update</id>
-    <updated>2026-04-27T09:12:35.060Z</updated>
-    <content type="text">Refined schedules to better match working hours.</content>
-  </entry>
-
-  <entry>
-    <title>Added success stories and testimonials.</title>
-    <id>tag:lessoncenter.org,2026-04-20T09:03:43.575Z:update</id>
-    <updated>2026-04-20T09:03:43.575Z</updated>
-    <content type="text">Added success stories and testimonials.</content>
   </entry>
 
   <entry>
@@ -205,13 +212,6 @@
     <title>Automated heartbeat</title>
     <id>tag:lessoncenter.org,2026-05-02T07:42:23.091Z:update</id>
     <updated>2026-05-02T07:42:23.091Z</updated>
-    <content type="text">Automated heartbeat</content>
-  </entry>
-
-  <entry>
-    <title>Automated heartbeat</title>
-    <id>tag:lessoncenter.org,2026-05-01T08:09:34.227Z:update</id>
-    <updated>2026-05-01T08:09:34.227Z</updated>
     <content type="text">Automated heartbeat</content>
   </entry>
 </feed>
