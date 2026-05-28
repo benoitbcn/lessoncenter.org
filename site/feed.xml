@@ -2,9 +2,16 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>LessonCenter updates</title>
   <id>tag:lessoncenter.org,2025:updates</id>
-  <updated>2026-05-27T09:42:15.316Z</updated>
+  <updated>2026-05-28T09:58:50.572Z</updated>
   <link rel="alternate" href="https://lessoncenter.org/updates.html"/>
   
+  <entry>
+    <title>Automated heartbeat</title>
+    <id>tag:lessoncenter.org,2026-05-28T09:58:50.572Z:update</id>
+    <updated>2026-05-28T09:58:50.572Z</updated>
+    <content type="text">Automated heartbeat</content>
+  </entry>
+
   <entry>
     <title>Automated heartbeat</title>
     <id>tag:lessoncenter.org,2026-05-27T09:42:15.316Z:update</id>
@@ -205,13 +212,6 @@
     <title>Automated heartbeat</title>
     <id>tag:lessoncenter.org,2026-05-04T08:27:29.452Z:update</id>
     <updated>2026-05-04T08:27:29.452Z</updated>
-    <content type="text">Automated heartbeat</content>
-  </entry>
-
-  <entry>
-    <title>Automated heartbeat</title>
-    <id>tag:lessoncenter.org,2026-05-03T08:00:02.416Z:update</id>
-    <updated>2026-05-03T08:00:02.416Z</updated>
     <content type="text">Automated heartbeat</content>
   </entry>
 </feed>
