@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-06-21T09:47:37.485Z",
+    "kind": "heartbeat",
+    "msg": "Automated heartbeat"
+  },
+  {
     "ts": "2026-06-20T08:53:42.604Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
@@ -141,11 +146,6 @@
   },
   {
     "ts": "2026-05-28T09:58:50.572Z",
-    "kind": "heartbeat",
-    "msg": "Automated heartbeat"
-  },
-  {
-    "ts": "2026-05-27T09:42:15.316Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
   }
