@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-07-07T09:37:56.648Z",
+    "kind": "heartbeat",
+    "msg": "Automated heartbeat"
+  },
+  {
     "ts": "2026-07-06T11:22:00.856Z",
     "kind": "news",
     "msg": "Updated pricing page with clearer tiers and examples."
@@ -141,11 +146,6 @@
   },
   {
     "ts": "2026-06-13T08:56:06.087Z",
-    "kind": "heartbeat",
-    "msg": "Automated heartbeat"
-  },
-  {
-    "ts": "2026-06-12T10:10:38.256Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
   }
