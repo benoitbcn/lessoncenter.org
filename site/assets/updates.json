@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-07-14T08:01:08.957Z",
+    "kind": "heartbeat",
+    "msg": "Automated heartbeat"
+  },
+  {
     "ts": "2026-07-13T10:15:35.739Z",
     "kind": "news",
     "msg": "Added success stories and testimonials."
@@ -141,11 +146,6 @@
   },
   {
     "ts": "2026-06-20T08:53:42.604Z",
-    "kind": "heartbeat",
-    "msg": "Automated heartbeat"
-  },
-  {
-    "ts": "2026-06-19T10:23:57.411Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
   }
