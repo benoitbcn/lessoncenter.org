@@ -1,5 +1,30 @@
 [
   {
+    "ts": "2026-07-20T09:49:20.264Z",
+    "kind": "news",
+    "msg": "Refined schedules to better match working hours."
+  },
+  {
+    "ts": "2026-07-13T10:15:35.739Z",
+    "kind": "news",
+    "msg": "Added success stories and testimonials."
+  },
+  {
+    "ts": "2026-07-06T11:22:00.856Z",
+    "kind": "news",
+    "msg": "Updated pricing page with clearer tiers and examples."
+  },
+  {
+    "ts": "2026-06-29T11:52:14.982Z",
+    "kind": "news",
+    "msg": "Published a short guide to picking the right program."
+  },
+  {
+    "ts": "2026-06-22T12:42:53.279Z",
+    "kind": "news",
+    "msg": "Expanded Pro/Enterprise modules with hands-on workshops."
+  },
+  {
     "ts": "2026-07-20T08:54:41.063Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
@@ -33,31 +58,6 @@
     "ts": "2026-07-14T08:01:08.957Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
-  },
-  {
-    "ts": "2026-07-13T10:15:35.739Z",
-    "kind": "news",
-    "msg": "Added success stories and testimonials."
-  },
-  {
-    "ts": "2026-07-06T11:22:00.856Z",
-    "kind": "news",
-    "msg": "Updated pricing page with clearer tiers and examples."
-  },
-  {
-    "ts": "2026-06-29T11:52:14.982Z",
-    "kind": "news",
-    "msg": "Published a short guide to picking the right program."
-  },
-  {
-    "ts": "2026-06-22T12:42:53.279Z",
-    "kind": "news",
-    "msg": "Expanded Pro/Enterprise modules with hands-on workshops."
-  },
-  {
-    "ts": "2026-06-15T12:57:52.408Z",
-    "kind": "news",
-    "msg": "Improved contact response time and SLA."
   },
   {
     "ts": "2026-07-13T09:23:09.615Z",
