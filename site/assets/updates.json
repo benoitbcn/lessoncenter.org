@@ -1,5 +1,30 @@
 [
   {
+    "ts": "2026-08-03T10:32:14.218Z",
+    "kind": "news",
+    "msg": "Corporate training: tailored tracks available for teams."
+  },
+  {
+    "ts": "2026-07-27T10:31:59.321Z",
+    "kind": "news",
+    "msg": "New Advanced cohort now open for enrollment."
+  },
+  {
+    "ts": "2026-07-20T09:49:20.264Z",
+    "kind": "news",
+    "msg": "Refined schedules to better match working hours."
+  },
+  {
+    "ts": "2026-07-13T10:15:35.739Z",
+    "kind": "news",
+    "msg": "Added success stories and testimonials."
+  },
+  {
+    "ts": "2026-07-06T11:22:00.856Z",
+    "kind": "news",
+    "msg": "Updated pricing page with clearer tiers and examples."
+  },
+  {
     "ts": "2026-08-03T09:40:30.710Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
@@ -33,31 +58,6 @@
     "ts": "2026-07-28T08:30:41.366Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
-  },
-  {
-    "ts": "2026-07-27T10:31:59.321Z",
-    "kind": "news",
-    "msg": "New Advanced cohort now open for enrollment."
-  },
-  {
-    "ts": "2026-07-20T09:49:20.264Z",
-    "kind": "news",
-    "msg": "Refined schedules to better match working hours."
-  },
-  {
-    "ts": "2026-07-13T10:15:35.739Z",
-    "kind": "news",
-    "msg": "Added success stories and testimonials."
-  },
-  {
-    "ts": "2026-07-06T11:22:00.856Z",
-    "kind": "news",
-    "msg": "Updated pricing page with clearer tiers and examples."
-  },
-  {
-    "ts": "2026-06-29T11:52:14.982Z",
-    "kind": "news",
-    "msg": "Published a short guide to picking the right program."
   },
   {
     "ts": "2026-07-27T09:48:57.727Z",
