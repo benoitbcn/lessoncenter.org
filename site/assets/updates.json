@@ -1,5 +1,30 @@
 [
   {
+    "ts": "2026-09-21T13:28:46.397Z",
+    "kind": "news",
+    "msg": "Published a short guide to picking the right program."
+  },
+  {
+    "ts": "2026-09-14T13:29:35.459Z",
+    "kind": "news",
+    "msg": "Expanded Pro/Enterprise modules with hands-on workshops."
+  },
+  {
+    "ts": "2026-09-07T13:09:19.243Z",
+    "kind": "news",
+    "msg": "Improved contact response time and SLA."
+  },
+  {
+    "ts": "2026-08-31T14:37:05.521Z",
+    "kind": "news",
+    "msg": "Added onboarding checklist for new learners."
+  },
+  {
+    "ts": "2026-08-24T07:49:52.779Z",
+    "kind": "news",
+    "msg": "Programs page refreshed with clearer learning outcomes."
+  },
+  {
     "ts": "2026-09-21T12:02:47.607Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
@@ -33,31 +58,6 @@
     "ts": "2026-09-15T11:07:07.068Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
-  },
-  {
-    "ts": "2026-09-14T13:29:35.459Z",
-    "kind": "news",
-    "msg": "Expanded Pro/Enterprise modules with hands-on workshops."
-  },
-  {
-    "ts": "2026-09-07T13:09:19.243Z",
-    "kind": "news",
-    "msg": "Improved contact response time and SLA."
-  },
-  {
-    "ts": "2026-08-31T14:37:05.521Z",
-    "kind": "news",
-    "msg": "Added onboarding checklist for new learners."
-  },
-  {
-    "ts": "2026-08-24T07:49:52.779Z",
-    "kind": "news",
-    "msg": "Programs page refreshed with clearer learning outcomes."
-  },
-  {
-    "ts": "2026-08-17T07:42:56.585Z",
-    "kind": "news",
-    "msg": "New coaching slots released for next month."
   },
   {
     "ts": "2026-09-14T11:51:37.930Z",
