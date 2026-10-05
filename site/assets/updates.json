@@ -1,5 +1,30 @@
 [
   {
+    "ts": "2026-10-05T15:24:38.459Z",
+    "kind": "news",
+    "msg": "Added success stories and testimonials."
+  },
+  {
+    "ts": "2026-09-28T14:43:04.944Z",
+    "kind": "news",
+    "msg": "Updated pricing page with clearer tiers and examples."
+  },
+  {
+    "ts": "2026-09-21T13:28:46.397Z",
+    "kind": "news",
+    "msg": "Published a short guide to picking the right program."
+  },
+  {
+    "ts": "2026-09-14T13:29:35.459Z",
+    "kind": "news",
+    "msg": "Expanded Pro/Enterprise modules with hands-on workshops."
+  },
+  {
+    "ts": "2026-09-07T13:09:19.243Z",
+    "kind": "news",
+    "msg": "Improved contact response time and SLA."
+  },
+  {
     "ts": "2026-10-05T13:39:31.965Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
@@ -33,31 +58,6 @@
     "ts": "2026-09-29T12:09:44.783Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
-  },
-  {
-    "ts": "2026-09-28T14:43:04.944Z",
-    "kind": "news",
-    "msg": "Updated pricing page with clearer tiers and examples."
-  },
-  {
-    "ts": "2026-09-21T13:28:46.397Z",
-    "kind": "news",
-    "msg": "Published a short guide to picking the right program."
-  },
-  {
-    "ts": "2026-09-14T13:29:35.459Z",
-    "kind": "news",
-    "msg": "Expanded Pro/Enterprise modules with hands-on workshops."
-  },
-  {
-    "ts": "2026-09-07T13:09:19.243Z",
-    "kind": "news",
-    "msg": "Improved contact response time and SLA."
-  },
-  {
-    "ts": "2026-08-31T14:37:05.521Z",
-    "kind": "news",
-    "msg": "Added onboarding checklist for new learners."
   },
   {
     "ts": "2026-09-28T12:57:39.524Z",
