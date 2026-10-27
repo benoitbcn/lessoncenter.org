@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-10-27T11:37:28.319Z",
+    "kind": "heartbeat",
+    "msg": "Automated heartbeat"
+  },
+  {
     "ts": "2026-10-26T13:44:03.707Z",
     "kind": "news",
     "msg": "Corporate training: tailored tracks available for teams."
@@ -141,11 +146,6 @@
   },
   {
     "ts": "2026-10-03T11:08:02.029Z",
-    "kind": "heartbeat",
-    "msg": "Automated heartbeat"
-  },
-  {
-    "ts": "2026-10-02T11:54:49.496Z",
     "kind": "heartbeat",
     "msg": "Automated heartbeat"
   }
